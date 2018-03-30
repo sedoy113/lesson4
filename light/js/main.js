@@ -75,29 +75,31 @@ length-(ограничение параметра) колл-во знаков, !
 							}
 				},
 				chooseShopItems: function chooseShopItems() {
-
+						for (let i = 0; i < 1; i++){
 							let items = prompt('Перечислите через запятую товары', '');
-							while (!isNaN(items) || items === null || items === '') {
-												alert('Введите названия товаров');
-												items = prompt('Перечислите через запятую Ваши товары', '');
-											}
-											mainList.shopItems = items.split(', ');
-											 mainList.shopItems.push(prompt('Подождите, еще ', ''));//push-добавление в мвссив
-											 mainList.shopItems.sort();//сортировка массива по порядку
-											 mainList.shopItems.shift();
-											  for (let key in mainList.shopItems) {
-											           console.log('Наш магазин включает в себя: ');
-											         }
-											     mainList.shopItems.forEach(function(item) {
 
-											       document.writeln('<h2>' + 'У нас вы можете купить: ' + item + '</h2>');
-											     });
+							if ((typeof(items)) === 'string'  &&  (typeof(items)) !== null && items !== '') {
 
+										 	mainList.shopItems = items.split(', ');
+											mainList.shopItems.push(prompt('Подождите, еще ', '')); //push-добавление в мвссив
+											mainList.shopItems.sort(); //сортировка массива по порядку
+											mainList.shopItems.shift();
+
+													mainList.shopItems.forEach(function(item) {
+													  document.writeln('<h2>' + 'У нас вы можете купить: ' + item + '</h2>');
+													});
+									} else { 
+										i = i -1;
+										 alert('Введите товар!');
+									}	
+								}
 				}
-	}
+	};
 
 	console.log(mainList);
-
+		for(let key in mainList) {
+		console.log("- " + key + ";");
+ }
 	/*chooseGoods();*/
 	/*workTime(19);*/
 		/*discount();*/
