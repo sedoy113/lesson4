@@ -74,6 +74,7 @@ length-(ограничение параметра) колл-во знаков, !
 							
 							}
 				},
+				//выбираем товар
 				chooseShopItems: function chooseShopItems() {
 						for (let i = 0; i < 1; i++){
 							let items = prompt('Перечислите через запятую товары', '');
