@@ -99,7 +99,7 @@ length-(ограничение параметра) колл-во знаков, !
 
 	console.log(mainList);
 		for(let key in mainList) {
-		console.log("- " + key + ";");
+		console.log(" - " + key + ";");
  }
 	/*chooseGoods();*/
 	/*workTime(19);*/
